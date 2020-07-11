@@ -6,24 +6,8 @@ import os
 # Load AppIndicator Module
 from gi.repository import Gtk as gtk, AppIndicator3 as appindicator
 
-# Load configparser
-import configparser
-
-# Load Configuration Module
-import load_config
-
-# Declare classes
-load_config.declare_classes()
-
-# Load configuration
-load_config.reload_config()
-
-# Get screen resolution
-Screen_width = gtk.gdk.screen_width()
-Screen_height = gtk.gdk.screen_height()
-
 def main():
-    indicator = appindicator.Indicator.new("customtray", "PyGrd.png",
+    indicator = appindicator.Indicator.new("customtray", "semi-starred-symbolic",
                                            appindicator.IndicatorCategory.APPLICATION_STATUS)
     indicator.set_status(appindicator.IndicatorStatus.ACTIVE)
     indicator.set_menu(menu())
