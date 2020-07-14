@@ -1,4 +1,4 @@
 [3_Columns]
-Window[1]= Window_conf(0,0,20,100)
+Window[1] = Window_conf(0,0,20,100)
 Window[2] = Window_conf(0,20,60,10)
 Window[3] = Window_conf(0,80,20,10)

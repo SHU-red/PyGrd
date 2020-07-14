@@ -4,54 +4,51 @@
 import os
 
 # Load AppIndicator Module
+import gi
+gi.require_version("Gtk", "3.0")
+gi.require_version('AppIndicator3', '0.1')
 from gi.repository import Gtk as gtk, AppIndicator3 as appindicator
 
-# Load configparser
-import configparser
+# Import menu filie
+from modules.menu import *
 
-# Load Configuration Module
-import load_config
-
-# Declare classes
-load_config.declare_classes()
-
-# Load configuration
-load_config.reload_config()
-
-# Get screen resolution
-Screen_width = gtk.gdk.screen_width()
-Screen_height = gtk.gdk.screen_height()
+# Start hotkey listener
+from modules import hotkey
 
 def main():
-    indicator = appindicator.Indicator.new("customtray", "PyGrd.png",
+
+    # Configure Tray icon
+    indicator = appindicator.Indicator.new("customtray", os.path.abspath('PyGrd.png'),
                                            appindicator.IndicatorCategory.APPLICATION_STATUS)
+
+    # Activate Tray icon
     indicator.set_status(appindicator.IndicatorStatus.ACTIVE)
-    indicator.set_menu(menu())
+
+    # Add Menu to Tray icon
+    indicator.set_menu(build_menu())
+
     gtk.main()
 
-
-def menu():
-    menu = gtk.Menu()
-
-    command_one = gtk.MenuItem('My Notes')
-    command_one.connect('activate', note)
-    menu.append(command_one)
-    exittray = gtk.MenuItem('Exit Tray')
-    exittray.connect('activate', quit)
-    menu.append(exittray)
-
-    menu.show_all()
-    return menu
-
-
-def note(_):
-    os.system("gedit $HOME/Documents/notes.txt")
-
-
+# Close Prorgram
 def quit(_):
     gtk.main_quit()
 
-def load_config():
+def declare_classes():
+    class Window_conf:
+        def __init__(self, x_ul, y_ul, width, height):
+            self.x_ul = x_ul
+            self.y_ul = y_ul
+            self.width = width
+            self.height = height
+
+
+
+
+def activate_setting(setting):
+
+    # Dummy
+    Test = 3
+
 
 
 
