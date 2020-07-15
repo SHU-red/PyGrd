@@ -1,6 +1,6 @@
 # PyGrd
 <p align="center">
-  <img src="icons/PyGrd_96.png">
+  <img src="icons/PyGrd_96.png"><br>
   Tray-application for snapping activated window into customizable grid
 </p>
   
