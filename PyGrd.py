@@ -15,7 +15,13 @@ from modules.menu import *
 # Start hotkey listener
 from modules import hotkey
 
+# Import Screen-size module
+from modules.grid_functions import get_screen_size
+
 def main():
+
+    # Read screensize
+    get_screen_size()
 
     # Configure Tray icon
     indicator = appindicator.Indicator.new("customtray", os.path.abspath('PyGrd.png'),
