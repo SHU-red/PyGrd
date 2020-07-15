@@ -3,7 +3,7 @@
 Tray-application for snapping activated window into customizable grid
 ***
 ## About
-<palign="center">
+<p align="center">
   Windows are moved and resized immediately to configuratable grid-tiles
   ![Arrangement example](documentation/windows.png?raw=true "Example of tiled windows")
   Easy configuration via percentual declaration
