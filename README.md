@@ -3,12 +3,12 @@
 Tray-application for snapping activated window into customizable grid
 ***
 ## About
-<div align="center">
+<palign="center">
   Windows are moved and resized immediately to configuratable grid-tiles
   ![Arrangement example](documentation/windows.png?raw=true "Example of tiled windows")
   Easy configuration via percentual declaration
   ![Config example](documentation/config.png?raw=true "Example of config.ini file")
-</div>
+</p>
 ***
 ## Platform
 Developed on Linux Mint 20 Cinnamon
