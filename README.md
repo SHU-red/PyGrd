@@ -11,8 +11,10 @@
 <p align="center">
   <b>Windows are moved and resized immediately to configuratable grid-tiles</b><br>
   <img src="documentation/windows.png"><br>
+  <br>
   <b>Easy configuration via percentual declaration</b><br>
   <img src="documentation/config.png"><br>
+  <br>
   <b>Easy configuration picking via TrayIcon</b><br>
   <img src="documentation/menu.png">
 </p>
