@@ -1,4 +1,4 @@
-![Alt text](PyGrd_96.png?raw=true "Title")
+![Alt text](icons/PyGrd_96.png?raw=true "Title")
 # PyGrd
 Tray-application for snapping activated window into customizable grid
 ***
