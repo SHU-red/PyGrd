@@ -4,12 +4,12 @@ Tray-application for snapping activated window into customizable grid
 ***
 ## About
 <p align="center">
-  **Windows are moved and resized immediately to configuratable grid-tiles**
+  <b>Windows are moved and resized immediately to configuratable grid-tiles</b>
   
   <img src="documentation/windows.png">
   
   
-  **Easy configuration via percentual declaration**
+  <b>Easy configuration via percentual declaration</b>
   <img src="documentation/config.png">
 </p>
 
