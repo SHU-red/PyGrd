@@ -26,8 +26,10 @@ def show_grid():
 
         print("Show grid hotkey pressed")
 
+        # TODO show grid
+
 # Move and resize currently active Window to Chosen grid
-def move_to_num():
+def move_to_num(number):
 
     # If Current setting not valid
     if not g.SValid:
@@ -36,27 +38,46 @@ def move_to_num():
     # If current setting valid
     else:
 
-        display = Xlib.display.Display()
-        root = display.screen().root
-        windowID = root.get_full_property(display.intern_atom('_NET_ACTIVE_WINDOW'), Xlib.X.AnyPropertyType).value[0]
-        window = display.create_resource_object('window', windowID)
-        window.configure(x = 20, y = 20, width=200, height=200)
-        display.sync()
+        # Convert keycode to integer number
+        int_number = ord(format(number.char)) - 48
 
-        print("Move to num Hotkey pressed")
+        print(int_number)
 
-        # screen = gtk.gdk.screen_get_default()
-        # active_window = screen.get_active_window()
-        #active_window.move(20,20)
-        # active_window = gtk.Application.get_active_window()
-        # active_window = gtk.App
-        #
-        #
-        # gtk.move(active_window,200,200)
+        # Initiate counter
+        n = 0
+
+        # Loop to check if window Numerator is defined
+        while n < len(g.Numeration):
+
+            # If Numeration equals the pushed button
+            if g.Numeration[n] == int_number:
+
+                # Re-Calculate scaling target in pixels
+                # (Done as late as possible in case of more loading situations in future)
+                scal_x = int(round(g.X_UpLeCorner[n]*0.01*g.X_ScreenSize,0))
+                scal_y = int(round(g.Y_UpLeCorner[n]*0.01*g.Y_ScreenSize,0))
+                scal_w = int(round(g.X_Width[n]*0.01*g.X_ScreenSize,0))
+                scal_h = int(round(g.Y_Height[n]*0.01*g.Y_ScreenSize,0))
+
+                # Move Window
+                display = Xlib.display.Display()
+                root = display.screen().root
+                windowID = root.get_full_property(display.intern_atom('_NET_ACTIVE_WINDOW'), Xlib.X.AnyPropertyType).value[0]
+                window = display.create_resource_object('window', windowID)
+                window.configure(x=scal_x,y=scal_y,width=scal_w,height=scal_h)
+                display.sync()
+
+                # Exit while loop
+                break
+
+            # Increase counter
+            n += 1
 
 # Clean Screen from shown Grid
 def kill_grid():
     print ("Kill Grid")
+
+    # TODO Kill grid
 
 # Get Screen sizes
 def get_screen_size():

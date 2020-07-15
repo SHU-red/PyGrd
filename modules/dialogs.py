@@ -12,9 +12,9 @@ def dlg_shortcuts(self):
     msgBox = gtk.MessageDialog(text = 'PyGrd-Shortcuts',
                                buttons = gtk.ButtonsType.OK,
                                type = gtk.MessageType.INFO,
-                               secondary_text='[Ctr]+[Super]\n= Show Grid\n\n'
-                                                                  '[Ctr]+[Super]+[Num]\n= Move to active window to [Num]-window\n\n'
-                                                                  '[Ctr]+[Super]+[Mouse-Leftklick]\n= Move active window to [Mouse-Leftklick]-window')
+                               secondary_text='[Ctr]+[Alt]\n= Show Grid\n\n'
+                                                                  '[Ctr]+[Alt]+[Num-Pad]\n= Move to active window to [Num]-window\n\n'
+                                                                  '[Ctr]+[Alt]+[Mouse-Leftklick]\n= Move active window to [Mouse-Leftklick]-window NOT READY YET')
     # Run Dialog
     msgBox.run()
 

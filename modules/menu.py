@@ -15,14 +15,16 @@ from modules.dialogs import *
 # Import settings module
 from modules.setting import *
 
+# Load styles for menues
+from modules.css_styling import load_css
+
 def build_menu():
+
+    # Set styling options
+    load_css()
 
     # Create Menu
     menu = gtk.Menu()
-
-    # Write gtk stlye settings
-    menu_settings = gtk.Settings.get_default()
-    menu_settings.set_property('gtk-application-prefer-dark-theme', True)
 
     # Show available configs
     reload_menu(menu)

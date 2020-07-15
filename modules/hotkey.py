@@ -6,18 +6,19 @@ from modules.grid_functions import *
 
 # Set Hotkeys
 hotkey_grid = [
-    {keyboard.Key.ctrl, keyboard.Key.shift}
+    {keyboard.Key.ctrl, keyboard.Key.alt}
 ]
 hotkey_num = [
-    {keyboard.Key.ctrl, keyboard.Key.shift, keyboard.KeyCode(char='1')},
-    {keyboard.Key.ctrl, keyboard.Key.shift, keyboard.KeyCode(char='2')},
-    {keyboard.Key.ctrl, keyboard.Key.shift, keyboard.KeyCode(char='3')},
-    {keyboard.Key.ctrl, keyboard.Key.shift, keyboard.KeyCode(char='4')},
-    {keyboard.Key.ctrl, keyboard.Key.shift, keyboard.KeyCode(char='5')},
-    {keyboard.Key.ctrl, keyboard.Key.shift, keyboard.KeyCode(char='6')},
-    {keyboard.Key.ctrl, keyboard.Key.shift, keyboard.KeyCode(char='7')},
-    {keyboard.Key.ctrl, keyboard.Key.shift, keyboard.KeyCode(char='8')},
-    {keyboard.Key.ctrl, keyboard.Key.shift, keyboard.KeyCode(char='9')}
+    {keyboard.Key.ctrl, keyboard.Key.alt, keyboard.KeyCode(char='0')},
+    {keyboard.Key.ctrl, keyboard.Key.alt, keyboard.KeyCode(char='1')},
+    {keyboard.Key.ctrl, keyboard.Key.alt, keyboard.KeyCode(char='2')},
+    {keyboard.Key.ctrl, keyboard.Key.alt, keyboard.KeyCode(char='3')},
+    {keyboard.Key.ctrl, keyboard.Key.alt, keyboard.KeyCode(char='4')},
+    {keyboard.Key.ctrl, keyboard.Key.alt, keyboard.KeyCode(char='5')}, #TODO Numpad 5 is not interpreted as char --> Different comparison
+    {keyboard.Key.ctrl, keyboard.Key.alt, keyboard.KeyCode(char='6')},
+    {keyboard.Key.ctrl, keyboard.Key.alt, keyboard.KeyCode(char='7')},
+    {keyboard.Key.ctrl, keyboard.Key.alt, keyboard.KeyCode(char='8')},
+    {keyboard.Key.ctrl, keyboard.Key.alt, keyboard.KeyCode(char='9')}
 ]
 
 # The currently active modifiers
@@ -28,6 +29,8 @@ def on_press(key):
 
     # if hasattr(key, 'vk') and key == keyboard.KeyCode(char='1'):
     #     print(key.vk)
+
+    123456597895555416293874print(key)
 
     # If Single-Key detected
     if any([key in COMBO for COMBO in hotkey_grid]):
@@ -51,7 +54,7 @@ def on_press(key):
         if any(all(k in current_num for k in COMBO) for COMBO in hotkey_num):
 
             # Move Active Window to desired grid-field
-            move_to_num()
+            move_to_num(key)
 
             # Kill Grid afterwards
             kill_grid()

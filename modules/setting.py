@@ -67,8 +67,6 @@ def setting_to_global_arrays(setting_name, read_config):
     # Checking string length
     length_equal = g.SLength == len(g.X_UpLeCorner) == len(g.Y_UpLeCorner) == len(g.X_Width) == len(g.Y_Height)
 
-
-
     # If Arrays have same length
     if length_equal:
 
@@ -77,8 +75,9 @@ def setting_to_global_arrays(setting_name, read_config):
         add_Y = list(map(lambda x, y: x + y, g.Y_UpLeCorner, g.Y_Height))
 
         # Checking value range
-        sizes_merged = g.X_UpLeCorner + g.Y_UpLeCorner + g.X_Width + g.Y_Height + add_X + add_Y
-        range_OK = max(sizes_merged) <= 100 and min(sizes_merged + g.Numeration) >= 0 and max(g.Numeration) <= 9
+        sizes_merged = g.X_Width + g.Y_Height + add_X + add_Y
+        coord_merges = g.X_UpLeCorner + g.Y_UpLeCorner
+        range_OK = max(sizes_merged) <= 100 and min(sizes_merged) > 0 and max(coord_merges) <= 100 and min(coord_merges) >= 0 and min(g.Numeration) >= 0 and max(g.Numeration) <= 9
 
     else:
         range_OK = False

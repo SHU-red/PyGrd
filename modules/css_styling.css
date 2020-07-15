@@ -1,0 +1,15 @@
+GdkMenu {
+color:#c4c4c4;
+background-color: #262626;
+
+outline-style: solid;
+outline-color: #ffffff;
+transition-property: all;
+}
+
+*:hover {
+color:#fff;
+font-weight: bolder;
+border-color: #c4c4c4;
+border-width: 5;
+}
