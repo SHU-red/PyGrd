@@ -27,11 +27,6 @@ current_num = set()
 
 def on_press(key):
 
-    # if hasattr(key, 'vk') and key == keyboard.KeyCode(char='1'):
-    #     print(key.vk)
-
-    123456597895555416293874print(key)
-
     # If Single-Key detected
     if any([key in COMBO for COMBO in hotkey_grid]):
 

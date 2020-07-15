@@ -24,7 +24,7 @@ def main():
     get_screen_size()
 
     # Configure Tray icon
-    indicator = appindicator.Indicator.new("customtray", os.path.abspath('PyGrd_96.png'),
+    indicator = appindicator.Indicator.new("customtray", os.path.abspath('icons/PyGrd_96.ico'),
                                            appindicator.IndicatorCategory.APPLICATION_STATUS)
 
     # Activate Tray icon
