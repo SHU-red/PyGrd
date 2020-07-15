@@ -8,6 +8,7 @@ Tray-application for snapping activated window into customizable grid
 <div align="center">Windows are moved and resized immediately to configuratable grid-tiles</div>
 
 
+
 ![Config example](documentation/config.png?raw=true "Example of config.ini file")
 <div align="center">Easy configuration via percentual declaration</div>
 
