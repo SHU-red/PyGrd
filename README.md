@@ -9,6 +9,7 @@ Tray-application for snapping activated window into customizable grid
   Easy configuration via percentual declaration
   <img src="documentation/config.png">
 </p>
+
 ***
 ## Platform
 Developed on Linux Mint 20 Cinnamon
