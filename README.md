@@ -2,9 +2,17 @@
 # PyGrd
 Tray-application for snapping activated window into customizable grid
 ***
+## About
+![Alt text](documentation/windows.png?raw=true "Title")
+Windows are moved and resized immediately to configuratable grid-tiles
+
+![Alt text](documentation/config.png?raw=true "Title")
+Easy configuration via percentual declaration
+***
+## Platform
 Developed on Linux Mint 20 Cinnamon
 ***
-Tasks
+## Tasks
 - [x] Basically running application
 - [x] Reading and checking config-files
 - [ ] Showing configured grids by pressing Ctr + Alt
