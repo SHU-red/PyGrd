@@ -3,11 +3,11 @@
 Tray-application for snapping activated window into customizable grid
 ***
 ## About
-<p align="center">
-![Example of tiled windows](documentation/windows.png?raw=true "Example of tiled windows")
+
+![Alternative text](documentation/windows.png?raw=true "Example of tiled windows")
 Windows are moved and resized immediately to configuratable grid-tiles</p>
-<p align="center">
-![Example of config-ini file](documentation/config.png?raw=true "Example of config.ini file)
+
+![Alternative text](documentation/config.png?raw=true "Example of config.ini file)
 Easy configuration via percentual declaration</p>
 ***
 ## Platform
