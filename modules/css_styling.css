@@ -1,15 +1,38 @@
-* {
+/* https://developer.gnome.org/gtk3/stable/GtkStyleContext.html */
+
+/* MENU */
+menu {
 color:#c4c4c4;
 background-color: #262626;
-
-outline-style: solid;
-outline-color: #ffffff;
-transition-property: all;
 }
 
-*:hover {
-color:#fff;
+separator {
+background-color: #000000;
+
+}
+
+menuitem:hover {
+background-color: #4a4a4a;
+color:#ffffff;
 font-weight: bolder;
-border-color: #c4c4c4;
-border-width: 5;
+}
+
+/* DIALOGS */
+
+messagedialog {
+color:#c4c4c4;
+background-color: #262626;
+}
+
+button {
+background: #262626;
+color:#c4c4c4;
+border:0;
+box-shadow:none;
+}
+
+button:hover {
+background: #4a4a4a;
+color:#ffffff;
+font-weight: bolder;
 }
