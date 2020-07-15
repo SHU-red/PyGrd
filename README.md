@@ -13,6 +13,8 @@
   <img src="documentation/windows.png">
   <b>Easy configuration via percentual declaration</b>
   <img src="documentation/config.png">
+  <b>Easy configuration picking via TrayIcon</b>
+  <img src="documentation/menu.png">
 </p>
 
 ***
