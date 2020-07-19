@@ -5,7 +5,7 @@ import modules.glob_vars as g
 import tkinter as tk
 
 # Import module for dialogs
-# from modules.dialogs import *
+from modules.dialogs import *
 
 import Xlib
 
