@@ -20,8 +20,10 @@
 </p>
 
 ***
-## Platform
-Developed on Linux Mint 20 Cinnamon
+## How to run
+- Developed & tested on Linux Mint 20 Cinnamon
+- Developed & testen on Python 3.8
+- Has to be ran as root due to handling of tray-icon
 ***
 ## Tasks
 - [x] Basically running application
