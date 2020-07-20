@@ -49,7 +49,7 @@ def build_menu():
 
     # Exit PyGrd
     exittray = gtk.MenuItem('Exit')
-    exittray.connect('activate', quit)
+    exittray.connect('activate', sys.exit)
     menu.append(exittray)
 
     menu.show_all()
@@ -63,19 +63,19 @@ def reload_menu(menu_item):
 
     # Parse from config-file
     config = configparser.ConfigParser()
-    config.read('config.ini')
+    config.read('config.txt')
 
 
 
     # Loop over all configs
     for conf in config.sections():
         menu_setting = gtk.MenuItem(conf)
-        menu_setting.connect('activate', write_setting_to_file,conf)
+        menu_setting.connect('activate', write_setting_to_file, conf)
 
         # If no config was stored in setting.ini, use currently loaded setting
         if setting == "":
             setting = conf
-            write_setting_to_file("",conf)
+            write_setting_to_file("", conf)
 
         # If detected as currently active configuration
         if conf == setting:
@@ -89,7 +89,6 @@ def reload_menu(menu_item):
         menu_item.append(menu_setting)
 
 def reload_configs(self,menu):
-    os.execl(sys.executable, sys.executable, *sys.argv)
 
-def read_setting(setting):
-    print("Reload Setting")
+    # Reload configs by restarting the program
+    os.execl(sys.executable, sys.executable, *sys.argv)
