@@ -33,9 +33,8 @@ def on_press(key):
     # Declare hotkey-indicator as global variable
     global hkey_active
 
-
+    # Print pushed key for debugging
     print(key)
-    print(hkey_active)
 
     # 5 on numpad returns KeyCode <65437>
     if key==keyboard.KeyCode(65437):
@@ -71,12 +70,11 @@ def on_press(key):
             hkey_active = 1
             print('hotkey_active set')
 
-        else:
-
-            # Reset indicator
-            hkey_active = 0
-
+# If some key is released
 def on_release(key):
+
+    # Set indicator to global variable
+    global hkey_active
 
     # Remove from Grid-List
     if any([key in COMBO for COMBO in hotkey_grid]):
@@ -95,6 +93,9 @@ def on_release(key):
 
         # Kill grid
         kill_grid()
+
+        # Reset indicator
+        hkey_active = 0
 
 
 # Declare Keyboard listener
