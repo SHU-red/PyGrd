@@ -6,6 +6,12 @@
 ;X_Width         = 20,60,20         # X-coordinate in %, starting from left screen-border --> ALLOWED VALUES: 0 - 100
 ;Y_Height        = 100,100,100      # X-coordinate in %, starting from left screen-border --> ALLOWED VALUES: 0 - 100
 
+[Like NumPad Position]
+Numeration      = 0     ,1      ,2      ,3      ,4      ,5      ,6      ,7      ,8      ,9
+X_UpLeCorner    = 0     ,0      ,30     ,70     ,0      ,30     ,70     ,0      ,30     ,70
+Y_UpLeCorner    = 0     ,50     ,50     ,50     ,0      ,0      ,0      ,0      ,0      ,0
+X_Width         = 100   ,30     ,40     ,30     ,30     ,40     ,30     ,30     ,40     ,30
+Y_Height        = 100   ,50     ,50     ,50     ,100    ,100    ,100    ,50     ,50     ,50
 
 [3_Columns]
 Numeration      : 0     ,1     ,2      ,3

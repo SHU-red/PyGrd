@@ -13,7 +13,7 @@ from gi.repository import Gtk as gtk, AppIndicator3 as appindicator
 from modules.menu import *
 
 # Start hotkey listener
-from modules import hotkey
+from modules.hotkey import *
 
 # Import Screen-size module
 from modules.grid_functions import get_screen_size
@@ -46,17 +46,6 @@ def declare_classes():
             self.y_ul = y_ul
             self.width = width
             self.height = height
-
-
-
-
-def activate_setting(setting):
-
-    # Dummy
-    Test = 3
-
-
-
 
 if __name__ == "__main__":
     main()
