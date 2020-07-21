@@ -49,8 +49,6 @@ def on_press(key):
             # Move Active Window to desired grid-field
             move_to_num(key)
 
-            print('move')
-
             # Kill Grid afterwards
             kill_grid()
 
@@ -68,7 +66,6 @@ def on_press(key):
 
             # Store information that hotkey is pressed
             hkey_active = 1
-            print('hotkey_active set')
 
 # If some key is released
 def on_release(key):
