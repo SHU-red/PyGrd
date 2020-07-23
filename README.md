@@ -18,10 +18,36 @@
 </p>
 
 ***
-## How to run
+## Development
 - Developed & tested on Linux Mint 20 Cinnamon
 - Developed & testen on Python 3.8
 - Has to be ran as root due to handling of tray-icon
+***
+## How to run
+Only tested on Linux Mint 20 Cinnamon
+- Modules are used requiring root (Gtk, Gdk, Tkinter, Xlib, ...)
+- To run applications as root without terminal-commands or passwords > systemd-services are used
+- For using systemd-services see documentation or tutorials (like [this one](https://forums.linuxmint.com/viewtopic.php?t=275464))
+
+Here's the script i use as pygrd.service:
+´´´
+[Unit]
+Description=PyGrd
+
+[Service]
+User=sebastian
+Group=nogroup
+Type=simple
+WorkingDirectory=/home/usr/PycharmProjects/PyGrd
+ExecStart=+/home/usr/PycharmProjects/PyGrd/PyGrd.py
+Restart=always
+RestartSec=3
+Environment=DISPLAY=:0
+
+[Install]
+WantedBy=multi-user.target
+
+´´´
 ***
 ## Tasks
 - [x] Basically running application
