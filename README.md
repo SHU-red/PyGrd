@@ -31,6 +31,7 @@ Only tested on Linux Mint 20 Cinnamon
 - For using systemd-services see documentation or tutorials (like [this one](https://forums.linuxmint.com/viewtopic.php?t=275464))
 
 Here's the script i use as pygrd.service:
+(placed at /etc/systemd/system/)
 ```
 [Unit]
 Description=PyGrd
