@@ -3,7 +3,7 @@
   <img src="icons/PyGrd_96.png"><br>
   <b>PyGrd</b><br>
   <br>
-  Tray-application for snapping activated window into customizable grid
+  Tray-application for snapping activated window into customizable grid<br>
   The perfect solution if you've got super-widescreen monitors for example!
 </p>
   
