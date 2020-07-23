@@ -4,6 +4,7 @@
   <b>PyGrd</b><br>
   <br>
   Tray-application for snapping activated window into customizable grid
+  The perfect solution if you've got super-widescreen monitors for example!
 </p>
   
 <p align="center">
