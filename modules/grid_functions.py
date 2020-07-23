@@ -15,6 +15,7 @@ gi.require_version('Gdk','3.0')
 gi.require_version('Gtk','3.0')
 from gi.repository import Gdk as gdk, Gtk as gtk, GdkX11
 
+# Show grid
 def show_grid():
 
     # If Current setting not valid
@@ -23,6 +24,11 @@ def show_grid():
 
     # If current setting valid
     else:
+
+        # If screensize not read since change
+        if not g.Res_Chk:
+            # Read screensize
+            get_screen_size()
 
         print("Show grid hotkey pressed")
 
@@ -37,6 +43,11 @@ def move_to_num(number):
 
     # If current setting valid
     else:
+
+        # If screensize not read since change
+        if not g.Res_Chk:
+            # Read screensize
+            get_screen_size()
 
         # Convert keycode to integer number
         int_number = ord(format(number.char)) - 48
@@ -97,3 +108,8 @@ def get_screen_size():
 
     # immediately destroy window
     root.destroy()
+
+    # Set indicator for checked Screen size
+    g.Res_Chk = 1
+
+    # TODO Check if screen resolution changes an reset indicator for checking screen resolution
