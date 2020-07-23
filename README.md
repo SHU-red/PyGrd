@@ -47,6 +47,12 @@ Environment=DISPLAY=:0
 [Install]
 WantedBy=multi-user.target
 ```
+Important settings:
+- User=usr is used for permissions
+- WorkingDirectory is used for relative paths to work
+- + at the beginning of ExecStart also is used for permissions
+- Restart and RestartSec is very important to keep the script always trying until display-informations are available during boot-process
+- Environment is also needed for the script not to crash in early-boot-phase
 ***
 ## Tasks
 - [x] Basically running application
