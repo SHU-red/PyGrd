@@ -30,7 +30,7 @@ Only tested on Linux Mint 20 Cinnamon
 - For using systemd-services see documentation or tutorials (like [this one](https://forums.linuxmint.com/viewtopic.php?t=275464))
 
 Here's the script i use as pygrd.service:
-´´´
+```
 [Unit]
 Description=PyGrd
 
@@ -46,8 +46,7 @@ Environment=DISPLAY=:0
 
 [Install]
 WantedBy=multi-user.target
-
-´´´
+```
 ***
 ## Tasks
 - [x] Basically running application
