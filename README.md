@@ -35,7 +35,7 @@ Here's the script i use as pygrd.service:
 Description=PyGrd
 
 [Service]
-User=sebastian
+User=usr
 Group=nogroup
 Type=simple
 WorkingDirectory=/home/usr/PycharmProjects/PyGrd
