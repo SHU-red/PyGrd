@@ -51,7 +51,7 @@ WantedBy=multi-user.target
 Important settings:
 - User=usr is used for permissions
 - WorkingDirectory is used for relative paths to work
-- + at the beginning of ExecStart also is used for permissions
+- "plus" at the beginning of ExecStart also is used for permissions
 - Restart and RestartSec is very important to keep the script always trying until display-informations are available during boot-process
 - Environment is also needed for the script not to crash in early-boot-phase
 ***
@@ -61,11 +61,10 @@ Important settings:
 - Until now only available for python 3.8 > Maybe executable binaries will occure in future
 ***
 ## Open Tasks
-- [x] Basically running application
-- [x] Reading and checking config-files
 - [ ] Showing configured grids by pressing Ctr + Alt
-- [x] Moving windows to configured grids by pressing Ctr + Alt + NUMPad
 - [ ] Moving windows to configured grids by clicking on grid
+- [ ] Documentation is never finished ;-)
 
-- [ ] Styling
-- [ ] Documentation
+But thats it!
+
+Enjoy and give feedback!
