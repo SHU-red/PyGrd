@@ -54,7 +54,12 @@ Important settings:
 - Restart and RestartSec is very important to keep the script always trying until display-informations are available during boot-process
 - Environment is also needed for the script not to crash in early-boot-phase
 ***
-## Tasks
+## Constraints
+- Not tested with multiple displays (useful for extra-wide-screens) > Feel free to request multi-display compatibility
+- Only tested with Linux Mint 20 Cinnamon
+- Until now only available for python 3.8 > Maybe executable binaries will occure in future
+***
+## Open Tasks
 - [x] Basically running application
 - [x] Reading and checking config-files
 - [ ] Showing configured grids by pressing Ctr + Alt
