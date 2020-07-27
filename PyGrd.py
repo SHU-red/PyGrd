@@ -1,7 +1,7 @@
 #!/usr/bin/python3.8
 
 # Load os module
-import os
+import os.path
 
 # Load AppIndicator Module
 import gi

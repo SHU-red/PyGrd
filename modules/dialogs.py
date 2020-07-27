@@ -1,7 +1,5 @@
-# Import gi from main-package
-import gi
-gi.require_version("Gtk", "3.0")
-from gi.repository import Gtk as gtk
+# Import MessageDialog
+import gi.repository.Gtk as gtk
 
 # Import global variables
 import modules.glob_vars as g
@@ -20,7 +18,7 @@ def dlg_setting_not_valid():
                                secondary_text='The configured values of\n\n'
                                               '[' + g.SName + ']\n\n'
                                               'in\n\n'
-                                              'config.ini\n\n'
+                                              'config.txt\n\n'
                                               'are faulty!\n\n'
                                               'Please make sure that:\n'
                                               '- Numeration has values from 1-9\n'

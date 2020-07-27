@@ -7,13 +7,13 @@ import tkinter as tk
 # Import module for dialogs
 from modules.dialogs import *
 
-import Xlib
+import Xlib.display
 
-# Import Gdk-Module
-import gi
-gi.require_version('Gdk','3.0')
-gi.require_version('Gtk','3.0')
-from gi.repository import Gdk as gdk, Gtk as gtk, GdkX11
+# # Import Gdk-Module
+# import gi
+# gi.require_version('Gdk','3.0')
+# gi.require_version('Gtk','3.0')
+# from gi.repository import Gdk as gdk, Gtk as gtk, GdkX11
 
 # Move and resize currently active Window to Chosen grid
 def move_to_num(number):
