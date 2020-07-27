@@ -9,8 +9,8 @@
   
 <p align="center">
   <b>Windows are moved and resized immediately to configuratable grid-tiles</b><br>
-  <img src="documentation/windows.png"><br>
   <img src="documentation/windows.gif"><br>
+  <img src="documentation/windows.png"><br>
   <br>
   <b>Easy configuration via percentual declaration</b><br>
   <img src="documentation/config.png"><br>
