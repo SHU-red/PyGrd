@@ -3,7 +3,7 @@
 /* MENU */
 menu {
 color:#c4c4c4;
-background-color: #262626;
+background-color: #333333;
 }
 
 separator {
@@ -21,11 +21,11 @@ font-weight: bolder;
 
 messagedialog {
 color:#c4c4c4;
-background-color: #262626;
+background-color: #333333;
 }
 
 button {
-background: #262626;
+background: #333333;
 color:#c4c4c4;
 border:0;
 box-shadow:none;

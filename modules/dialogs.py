@@ -8,18 +8,8 @@ import modules.glob_vars as g
 
 def dlg_shortcuts(self):
 
-    # Show Shortcut info-dialog
-    msgBox = gtk.MessageDialog(text = 'PyGrd-Shortcuts',
-                               buttons = gtk.ButtonsType.OK,
-                               type = gtk.MessageType.INFO,
-                               secondary_text='[Ctr]+[Alt]\n= Show Grid\n\n'
-                                                                  '[Ctr]+[Alt]+[Num-Pad]\n= Move to active window to [Num]-window\n\n'
-                                                                  '[Ctr]+[Alt]+[Mouse-Leftklick]\n= Move active window to [Mouse-Leftklick]-window NOT READY YET')
-    # Run Dialog
-    msgBox.run()
-
-    # Close after Button was pushed
-    msgBox.destroy()
+    # Do nothing
+    pass
 
 def dlg_setting_not_valid():
 

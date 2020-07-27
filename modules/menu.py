@@ -39,7 +39,7 @@ def build_menu():
     menu.append(exittray)
 
     # Reload ini-file
-    exittray = gtk.MenuItem('Show shortcuts')
+    exittray = gtk.MenuItem('Hotkey:   <Ctr> + <Alt> + <0-9>')
     exittray.connect('activate', dlg_shortcuts)
     menu.append(exittray)
 
