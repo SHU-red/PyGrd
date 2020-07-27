@@ -96,7 +96,7 @@ def on_release(key):
 
 
 # Declare Keyboard listener
-listener = keyboard.Listener(on_press=on_press,on_release=on_release)
+listener = keyboard.Listener(on_press=on_press,on_release=on_release, supress=True)
 
 # Start keyboard Listener
 listener.start()

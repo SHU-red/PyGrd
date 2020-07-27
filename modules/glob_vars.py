@@ -11,6 +11,8 @@ SName = 'None'
 # Usable Screen-size
 X_ScreenSize = 0
 Y_ScreenSize = 0
+X_ScreenCorner = 0
+Y_ScreenCorner = 0
 
 # Indicator for resolution checked
 Res_Chk = 0

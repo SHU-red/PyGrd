@@ -65,8 +65,8 @@ def move_to_num(number):
 
                 # Re-Calculate scaling target in pixels
                 # (Done as late as possible in case of more loading situations in future)
-                scal_x = int(round(g.X_UpLeCorner[n]*0.01*g.X_ScreenSize,0))
-                scal_y = int(round(g.Y_UpLeCorner[n]*0.01*g.Y_ScreenSize,0))
+                scal_x = g.X_ScreenCorner + int(round(g.X_UpLeCorner[n]*0.01*g.X_ScreenSize,0))
+                scal_y = g.Y_ScreenCorner + int(round(g.Y_UpLeCorner[n]*0.01*g.Y_ScreenSize,0))
                 scal_w = int(round(g.X_Width[n]*0.01*g.X_ScreenSize,0))
                 scal_h = int(round(g.Y_Height[n]*0.01*g.Y_ScreenSize,0))
 
@@ -105,6 +105,10 @@ def get_screen_size():
     # read size of usable space
     g.X_ScreenSize = root.winfo_width()
     g.Y_ScreenSize = root.winfo_height()
+    g.X_ScreenCorner = root.winfo_x()
+    g.Y_ScreenCorner = root.winfo_y()
+
+    print(str(g.X_ScreenCorner) + ' - ' + str(g.Y_ScreenCorner) + ' - ' + str(g.X_ScreenSize) + ' - ' + str(g.Y_ScreenSize))
 
     # immediately destroy window
     root.destroy()
