@@ -16,3 +16,9 @@ Y_ScreenCorner = 0
 
 # Indicator for resolution checked
 Res_Chk = 0
+
+# Re-calculated values in pixels
+scal_x = 0
+scal_y = 0
+scal_w = 0
+scal_h = 0

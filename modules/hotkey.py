@@ -49,9 +49,6 @@ def on_press(key):
             # Move Active Window to desired grid-field
             move_to_num(key)
 
-            # Kill Grid afterwards
-            kill_grid()
-
     # If Single-Key detected
     if any([key in COMBO for COMBO in hotkey_grid]):
 
@@ -60,9 +57,6 @@ def on_press(key):
 
         # If Grid-HotKey detected
         if any(all(k in current_grid for k in COMBO) for COMBO in hotkey_grid):
-
-            # Show configured Grid
-            show_grid()
 
             # Store information that hotkey is pressed
             hkey_active = 1
@@ -87,9 +81,6 @@ def on_release(key):
 
             # Do nothing
             pass
-
-        # Kill grid
-        kill_grid()
 
         # Reset indicator
         hkey_active = 0
