@@ -61,11 +61,6 @@ Important settings:
 - Not tested with multiple displays (useful for extra-wide-screens) > Feel free to request multi-display compatibility
 - Only tested with Linux Mint 20 Cinnamon
 - Until now only available for python 3.8 > Maybe executable binaries will occure in future
-***
-## Open Tasks
-- [ ] Showing configured grids by pressing Ctr + Alt
-- [ ] Moving windows to configured grids by clicking on grid
-- [ ] Documentation is never finished ;-)
 
 But thats it!
 
