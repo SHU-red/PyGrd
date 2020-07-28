@@ -1,5 +1,5 @@
 # import os functions
-import sys
+import sys, os
 
 # Import gi from main-package
 import gi
@@ -34,7 +34,12 @@ def build_menu():
     menu.append(menu_separator)
 
     # Reload ini-file
-    exittray = gtk.MenuItem('Reload configs')
+    exittray = gtk.MenuItem('Open config.txt')
+    exittray.connect('activate', open_configs)
+    menu.append(exittray)
+
+    # Reload ini-file
+    exittray = gtk.MenuItem('Reload config.txt')
     exittray.connect('activate', reload_configs,menu)
     menu.append(exittray)
 
@@ -92,3 +97,8 @@ def reload_configs(self,menu):
 
     # Reload configs by restarting the program
     os.execl(sys.executable, sys.executable, *sys.argv)
+
+def open_configs(self):
+
+    # Open file
+    os.system('xed config.txt')
