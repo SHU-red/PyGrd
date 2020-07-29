@@ -74,24 +74,36 @@ def reload_menu(menu_item):
 
     # Loop over all configs
     for conf in config.sections():
-        menu_setting = gtk.MenuItem(conf)
-        menu_setting.connect('activate', write_setting_to_file, conf)
 
-        # If no config was stored in setting.ini, use currently loaded setting
-        if setting == "":
-            setting = conf
-            write_setting_to_file("", conf)
+        # Ignore PyGrd-Setting for general variables
+        if conf != 'PyGrd':
 
-        # If detected as currently active configuration
-        if conf == setting:
+            # Create Menu item
+            menu_setting = gtk.MenuItem(conf)
+            menu_setting.connect('activate', write_setting_to_file, conf)
 
-            # Highlight the active setting
-            menu_setting.select()
+            # If no config was stored in setting.ini, use currently loaded setting
+            if setting == "":
+                setting = conf
+                write_setting_to_file("", conf)
 
-            # Write setting into global arrays
-            setting_to_global_arrays(setting, config)
+            # If detected as currently active configuration
+            if conf == setting:
 
-        menu_item.append(menu_setting)
+                # Highlight the active setting
+                menu_setting.select()
+
+                # Write setting into global arrays
+                setting_to_global_arrays(setting, config)
+
+            # Append Menu Item
+            menu_item.append(menu_setting)
+
+        # If PyGrd-Setting is loaded
+        else:
+
+            # Write system editor
+            g.editor = config[conf]['OS_editor']
 
 def reload_configs(self,menu):
 
@@ -101,4 +113,4 @@ def reload_configs(self,menu):
 def open_configs(self):
 
     # Open file
-    os.system('xed config.txt')
+    os.system(g.editor + ' config.txt')

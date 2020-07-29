@@ -22,3 +22,6 @@ scal_x = 0
 scal_y = 0
 scal_w = 0
 scal_h = 0
+
+# General settings
+editor = 'xed'
