@@ -64,4 +64,4 @@ Important settings:
 
 But thats it!
 
-Enjoy and give fee1dback!
+Enjoy and give feedback!
