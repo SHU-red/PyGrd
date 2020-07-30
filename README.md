@@ -64,4 +64,4 @@ Important settings:
 
 But thats it!
 
-Enjoy and give feedb22ack!
+Enjoy and give feedback!
