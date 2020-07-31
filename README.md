@@ -64,4 +64,4 @@ Important settings:
 
 But thats it!
 
-Enjoy and give feedback!1
+Enjoy and give feedback!
