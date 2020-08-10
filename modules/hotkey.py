@@ -33,9 +33,6 @@ def on_press(key):
     # Declare hotkey-indicator as global variable
     global hkey_active
 
-    # Print pushed key for debugging
-    print(key)
-
     # 5 on numpad returns KeyCode <65437>
     if key==keyboard.KeyCode(65437):
 
